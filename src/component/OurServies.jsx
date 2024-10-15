@@ -19,7 +19,7 @@ export default function Services() {
         {
             title: 'Research and Feasibility Studies',
             icon: <Microscope className="h-6 w-6 text-primary" />,
-            description: 'Make informed decisions with our in-depth market research and feasibility studies.',
+            description: 'Make informed decisions with our in-depth market Research Development .',
             details: ['Market Research', 'Feasibility Studies', 'Clinical Research Support'],
         },
         {
