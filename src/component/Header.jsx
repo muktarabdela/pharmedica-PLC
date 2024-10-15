@@ -21,7 +21,7 @@ const Header = () => {
                 {/* Logo */}
                 <div className="mt-4 hidden md:block">
                     <a href='#' className="cursor-pointer">
-                        <img className="w-[5em] h-[4em] object-cover" src={logo} alt="Pharmedica Logo" />
+                        <img className="w-[5em] h-[4em] rounded-full object-cover" src={logo} alt="Pharmedica Logo" />
                     </a>
                 </div>
 
