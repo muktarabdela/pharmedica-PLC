@@ -3,7 +3,7 @@ import image1 from '../assets/hero 2.jpg';
 import image2 from '../assets/hero 1.jpg';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
-const images = [image1, image2];
+const images = [image2, image1];
 
 const Hero = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -55,7 +55,7 @@ const Hero = () => {
                                 <CarouselItem key={index}>
                                     <img
                                         className="w-full h-[250px] sm:h-[350px] lg:h-[517px] object-cover rounded-lg"
-                                        src={image2}  // Using the mapped image
+                                        src={image}  // Using the mapped image
                                         alt="Healthcare consultancy"
                                     />
                                 </CarouselItem>

@@ -37,7 +37,7 @@ export default function Strategy() {
     ];
 
     return (
-        <div className="container mx-auto py-12 px-4">
+        <div className="container mx-auto py-12 px-4 max-w-7xl">
             <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Our Strategy</h2>
             <p className="text-xl text-center text-gray-500 mb-12 max-w-xl mx-auto">
                 At PharMedica consultancy and Technology PLC, we implement strategies that align with our vision to drive innovation, sustainability, and customer satisfaction.

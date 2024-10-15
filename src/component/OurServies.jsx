@@ -49,7 +49,7 @@ export default function Services() {
     ];
 
     return (
-        <div className="container mx-auto py-12 px-4">
+        <div className="container mx-auto py-12 px-4 max-w-7xl">
             <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Our Services</h1>
             <p className="text-xl text-center text-gray-500 mb-12 max-w-xl mx-auto">
                 PharMedica consultancy and Technology PLC offers a comprehensive range of services to support your healthcare business needs.

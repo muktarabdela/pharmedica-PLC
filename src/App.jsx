@@ -7,6 +7,10 @@ import Aboutus from './component/Aboutus'
 import Team from './component/Team'
 import Services from './component/OurServies'
 import Strategy from './component/Strategy'
+import PartnersAffiliations from './component/PartnersAffiliations'
+import ClientsSection from './component/ClientsSection'
+import ContactSection from './component/ContactSection'
+import Footer from './component/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +22,11 @@ function App() {
       <Aboutus />
       <Services />
       <Strategy />
-      {/* <Team /> */}
+      <Team />
+      <PartnersAffiliations />
+      <ClientsSection />
+      <ContactSection />
+      <Footer />
     </div>
   )
 }
