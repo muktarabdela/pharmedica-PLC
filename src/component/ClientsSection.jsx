@@ -5,12 +5,12 @@ const clients = [
     {
         name: 'Healthcare Provider Inc.',
         logo: logo1,
-        testimonial: 'PharMedica has been instrumental in improving our healthcare technology integration.',
+        testimonial: 'Pharmedica has been instrumental in improving our healthcare technology integration.',
     },
     {
         name: 'PharmaTech Solutions',
         logo: logo1,
-        testimonial: 'The team at PharMedica provided valuable strategic advice that helped us expand our market reach.',
+        testimonial: 'The team at Pharmedica provided valuable strategic advice that helped us expand our market reach.',
     },
     {
         name: 'Nutritional Wellness Corp.',

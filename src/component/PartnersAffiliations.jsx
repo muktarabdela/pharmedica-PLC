@@ -11,16 +11,16 @@ const partners = [
         description: 'Strategic partnership with Addis Ababa University aimed at advancing healthcare marketing integration.',
     },
     {
-        name: 'PharMedica Healthcare Solutions',
+        name: 'Pharmedica Healthcare Solutions',
         logo: logo2,
-        description: 'PharMedica Consultancy and Technology PLC collaborates with various governmental and private health organizations.',
+        description: 'Pharmedica Consultancy and Technology PLC collaborates with various governmental and private health organizations.',
     },
     // Add more partners as needed
 ]
 
 export default function PartnersAffiliations() {
     return (
-        <section className="py-16 bg-gradient-to-b from-background to-secondary/20">
+        <section id='partners' className="py-16 bg-gradient-to-b from-background to-secondary/20">
             <div className="container  px-4 max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold mb-4 flex items-center justify-center">

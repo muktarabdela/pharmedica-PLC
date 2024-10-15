@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Linkedin, Twitter } from 'lucide-react'
 
 const TeamMember = ({ name, position, email, image }) => (
-    <Card className="w-full max-w-sm mx-auto bg-gray-100">
+    <Card id='team' className="w-full max-w-sm mx-auto bg-gray-100">
         <CardContent className="pt-6">
             <div className="aspect-square overflow-hidden rounded-full border-4 border-[#06487c] mb-4">
                 <img
@@ -34,7 +34,7 @@ export default function Team() {
         {
             name: "Nurlgn Yesuf",
             position: "Founder and CEO",
-            email: "pharmedica.et@gmail.com",
+            email: "Pharmedica.et@gmail.com",
             image: "/placeholder.svg?height=200&width=200"
         },
         // Add more team members here as needed
@@ -45,7 +45,7 @@ export default function Team() {
             <div className="container px-4 max-w-7xl mx-auto" >
                 <h2 className="text-4xl font-bold text-center mb-12">Our Team</h2>
                 <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-                    Meet the dedicated professionals behind PharMedica consultancy and Technology PLC,
+                    Meet the dedicated professionals behind Pharmedica consultancy and Technology PLC,
                     committed to transforming healthcare through innovation and expertise.
                 </p>
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

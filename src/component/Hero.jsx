@@ -17,7 +17,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div id="pharmedica-hero" className="mt-24">
+        <div id="Pharmedica-hero" className="mt-24">
             <div className="flex flex-col lg:flex-row bg-[#] p-6 lg:p-12 rounded-lg shadow-lg max-w-7xl mx-auto">
                 {/* Left Section */}
                 <div className="lg:w-[60%] w-full lg:pr-12 mb-8 lg:mb-0">
@@ -28,7 +28,7 @@ const Hero = () => {
                         </span>
                     </h1>
                     <p className="text-[#04D40] mt-4 md:mt-6 text-sm md:text-lg">
-                        PharMedica Consultancy and Technology PLC provides tailored advisory services
+                        Pharmedica Consultancy and Technology PLC provides tailored advisory services
                         and innovative technology solutions for healthcare organizations. Our mission is to
                         empower healthcare providers and companies to thrive in an evolving industry through
                         expert consultancy and cutting-edge technology integration.

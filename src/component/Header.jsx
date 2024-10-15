@@ -16,12 +16,12 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 w-full z-50 bg-[#04477C] h-20">
+        <header className=" w-full z-50 bg-[#04477C] h-20">
             <div className="px-4 lg:px-6 h-14 flex items-center w-full pt-2 max-w-6xl mx-auto">
                 {/* Logo */}
-                <div className="mt-4">
+                <div className="mt-4 hidden md:block">
                     <a href='#' className="cursor-pointer">
-                        <img className="w-[5em] h-[4em] object-cover" src={logo} alt="PharMedica Logo" />
+                        <img className="w-[5em] h-[4em] object-cover" src={logo} alt="Pharmedica Logo" />
                     </a>
                 </div>
 
@@ -58,10 +58,11 @@ const Header = () => {
                                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
                         </SheetTrigger>
-                        <a href="#" className="items-center flex md:hidden">
-                            <img className='w-[8em] h-[3em] sm:w-[10em] sm:h-[4em]' src={logo} alt="PharMedica Logo" />
-                            <span className="sr-only">PharMedica Consultancy and Technology PLC</span>
-                        </a>
+                        <div className="mt-4">
+                            <a href='#' className="cursor-pointer">
+                                <img className="w-[5em] h-[4em] object-cover" src={logo} alt="Pharmedica Logo" />
+                            </a>
+                        </div>
                         {/* Sheet Content */}
                         <SheetContent side="left" className="p-4 bg-white">
                             <nav className="flex flex-col gap-4">

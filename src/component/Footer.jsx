@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">PharMedica</h3>
+                        <h3 className="text-lg font-semibold mb-4">Pharmedica</h3>
                         <p className="text-sm mb-4">
                             Transforming healthcare through innovative consultancy and technology solutions.
                         </p>
@@ -38,7 +38,7 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-2">
                             <ContactItem icon={<Phone size={16} />} text="+25199626111" />
-                            <ContactItem icon={<Mail size={16} />} text="pharmedica.et@gmail.com" />
+                            <ContactItem icon={<Mail size={16} />} text="Pharmedica.et@gmail.com" />
                             <ContactItem icon={<MapPin size={16} />} text="Arada Subcity, Woreda 06, Addis Ababa, Ethiopia" />
                         </ul>
                     </div>
@@ -58,7 +58,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="text-center text-sm">
-                    <p>© {new Date().getFullYear()} PharMedica Consultancy and Technology PLC. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Pharmedica Consultancy and Technology PLC. All rights reserved.</p>
                 </div>
             </div>
         </footer>
