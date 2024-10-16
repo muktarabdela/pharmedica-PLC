@@ -74,13 +74,13 @@ export default function ContactSection() {
                         </CardHeader>
                         <CardContent>
                             <form onSubmit={sendEmail} className="space-y-4">
-                                <Input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" />
+                                <Input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required/>
                                 <Input
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    type="email" placeholder="Your Email" />
-                                <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Your Message" className="h-32" />
+                                    type="email" placeholder="Your Email" required />
+                                <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Your Message" className="h-32" required />
                                 <Button type="submit" className="w-full bg-[#04477C] hover:bg-blue-700">
                                     {isSending ? 'Sending...' : 'Send Message'}
                                 </Button>
