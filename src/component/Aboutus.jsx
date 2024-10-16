@@ -110,7 +110,7 @@ function FeatureCard({ icon, title, description }) {
                 <div className="flex-shrink-0">{icon}</div>
                 <div>
                     <h3 className="font-semibold text-lg mb-2 text-gray-300">{title}</h3>
-                    <p className="text-muted-foreground text-gray-400">{description}</p>
+                    <p className="text-muted-foreground text-inset text-indigo-200">{description}</p>
                 </div>
             </CardContent>
         </Card>

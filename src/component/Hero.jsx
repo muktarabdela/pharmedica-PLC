@@ -8,6 +8,14 @@ const images = [image2, image1];
 const Hero = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setIsOpen(false); // Close mobile menu after navigating
+        }
+    };
+
     // Auto-slide effect
     useEffect(() => {
         const interval = setInterval(() => {
@@ -34,13 +42,13 @@ const Hero = () => {
                         expert consultancy and cutting-edge technology integration.
                     </p>
                     {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-                        <button className="bg-[#00796B] text-white py-3 px-8 rounded-full font-medium">
+                    <div onClick={() => scrollToSection('contact')} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+                        <button  className="bg-[#00796B] text-white py-3 px-8 rounded-full font-medium">
                             Contact Us
                         </button>
-                        <button className="border border-[#004D40] py-3 px-8 rounded-full text-[#004D40] font-medium">
+                        {/* <button className="border border-[#004D40] py-3 px-8 rounded-full text-[#004D40] font-medium">
                             Learn More
-                        </button>
+                        </button> */}
                     </div>
                     <div className="mt-4 text-[#004D40] text-sm">
                         <span>✓ Trusted Healthcare Advisory</span>

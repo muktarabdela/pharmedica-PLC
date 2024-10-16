@@ -26,7 +26,7 @@ export default function Strategy() {
         },
         {
             title: 'Timely Execution',
-            icon: <Clock className="h-6 w-6 text-[#06487c]" />,
+            icon: <Clock className="h-6 w-6 text-primary" />,
             description: 'We emphasize timely project execution to meet and exceed our clients’ expectations.',
         },
         {

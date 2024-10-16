@@ -5,6 +5,13 @@ import { Separator } from "@/components/ui/separator"
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setIsOpen(false); // Close mobile menu after navigating
+        }
+    };
     return (
         <footer className="bg-[#128dd1] text-primary-foreground">
             <div className="container mx-auto px-4 py-12">
@@ -26,10 +33,10 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
-                            <FooterLink href="/about">About Us</FooterLink>
-                            <FooterLink href="/services">Our Services</FooterLink>
-                            <FooterLink href="/team">Our Team</FooterLink>
-                            <FooterLink href="/contact">Contact Us</FooterLink>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('about-us')}>About Us</div>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('services')}>Our Services</div>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('team')}>Our Team</div>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('contact')}>Contact Us</div>
                         </ul>
                     </div>
 

@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Linkedin, Twitter } from 'lucide-react'
 
 const TeamMember = ({ name, position, email, image }) => (
-    <Card id='team' className="w-full max-w-sm mx-auto bg-gray-100">
+    <Card  className="w-full max-w-sm mx-auto bg-gray-100">
         <CardContent className="pt-6">
             <div className="aspect-square overflow-hidden rounded-full border-4 border-[#06487c] mb-4">
                 <img
@@ -41,7 +41,7 @@ export default function Team() {
     ]
 
     return (
-        <div className="bg-gradient-to-b from-background to-secondary/20 py-16 ">
+        <div id='team' className="bg-gradient-to-b from-background to-secondary/20 py-16 ">
             <div className="container px-4 max-w-7xl mx-auto" >
                 <h2 className="text-4xl font-bold text-center mb-12">Our Team</h2>
                 <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
