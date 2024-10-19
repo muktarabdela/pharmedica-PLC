@@ -38,7 +38,7 @@ export default function Aboutus() {
                     {/* Vision and Mission Section */}
                     <section className="mb-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
-                            <Card className="bg-[#128dd1]">
+                            <Card className="bg-[#118cd1]">
                                 <CardContent className="p-6 text-gray-50">
                                     <h3 className="text-2xl font-bold mb-4">Vision</h3>
                                     <p className="text-gray-50">
@@ -46,7 +46,7 @@ export default function Aboutus() {
                                     </p>
                                 </CardContent>
                             </Card>
-                            <Card className="bg-[#128dd1]">
+                            <Card className="bg-[#118cd1]">
                                 <CardContent className="p-6">
                                     <h3 className="text-2xl font-bold mb-4 text-gray-50">Mission</h3>
                                     <p className="text-gray-50">
@@ -105,12 +105,12 @@ export default function Aboutus() {
 
 function FeatureCard({ icon, title, description }) {
     return (
-        <Card className="w-full bg-[#06487c]">
+        <Card className="w-full bg-[#04477c]">
             <CardContent className="flex items-start p-4 space-x-2">
                 <div className="flex-shrink-0">{icon}</div>
                 <div>
                     <h3 className="font-semibold text-lg mb-2 text-gray-300">{title}</h3>
-                    <p className="text-muted-foreground text-inset text-indigo-200">{description}</p>
+                    <p className="text-muted-foreground text-inset text-indigo-100">{description}</p>
                 </div>
             </CardContent>
         </Card>

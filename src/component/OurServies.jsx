@@ -5,22 +5,22 @@ import { ChevronRight, Microscope, FileCheck, Cog, GraduationCap, BarChart, Shie
 export default function Services() {
     const services = [
         {
-            title: 'Sales Promotion and Marketing',
-            icon: <BarChart className="h-6 w-6 text-primary" />,
-            description: 'Enhance your product visibility and market penetration with our tailored marketing strategies.',
-            details: ['Strategic Marketing Planning', 'Sales Promotion Campaigns', 'Brand Management', 'Digital Marketing'],
-        },
-        {
-            title: 'Post-Marketing Surveillance',
-            icon: <ShieldCheck className="h-6 w-6 text-primary" />,
-            description: 'Ensure the safety and efficacy of your products after market release.',
-            details: ['Pharmacovigilance', 'Adverse Event Reporting', 'Market Feedback Analysis'],
-        },
-        {
-            title: 'Research and Feasibility Studies',
+            title: 'Research and development',
             icon: <Microscope className="h-6 w-6 text-primary" />,
             description: 'Make informed decisions with our in-depth market Research Development .',
-            details: ['Market Research', 'Feasibility Studies', 'Clinical Research Support'],
+            details: ['Research', 'Feasibility Studies', 'Clinical Research Support'],
+        },
+        {
+            title: 'Training and Capacity Building',
+            icon: <GraduationCap className="h-6 w-6 text-primary" />,
+            description: 'Empower your team with our customized training programs and workshops.',
+            details: ['Workshops and Seminars', 'Customized Training Programs'],
+        },
+        {
+            title: 'Consulting Services',
+            icon: <Users className="h-6 w-6 text-primary" />,
+            description: 'Optimize your business strategy and operations with our expert consulting services.',
+            details: ['Strategic Consulting', 'Operational Consulting','conducting comprehensive needs assessments','designing monitoring and evaluation of projects'],
         },
         {
             title: 'Regulatory Affairs and Compliance',
@@ -35,16 +35,16 @@ export default function Services() {
             details: ['Pharmaceutical and Health Technology Solutions', 'Data Analytics'],
         },
         {
-            title: 'Training and Capacity Building',
-            icon: <GraduationCap className="h-6 w-6 text-primary" />,
-            description: 'Empower your team with our customized training programs and workshops.',
-            details: ['Workshops and Seminars', 'Customized Training Programs'],
+            title: 'Post-Marketing Surveillance',
+            icon: <ShieldCheck className="h-6 w-6 text-primary" />,
+            description: 'Ensure the safety and efficacy of your products after market release.',
+            details: ['Pharmacovigilance', 'Adverse Event Reporting', 'Market Feedback Analysis'],
         },
         {
-            title: 'Consulting Services',
-            icon: <Users className="h-6 w-6 text-primary" />,
-            description: 'Optimize your business strategy and operations with our expert consulting services.',
-            details: ['Strategic Consulting', 'Operational Consulting'],
+            title: 'Sales Promotion and Marketing',
+            icon: <BarChart className="h-6 w-6 text-primary" />,
+            description: 'Enhance your product visibility and market penetration with our tailored marketing strategies.',
+            details: ['Strategic Marketing Planning', 'Sales Promotion Campaigns', 'Brand Management', 'Digital Marketing'],
         },
     ];
 

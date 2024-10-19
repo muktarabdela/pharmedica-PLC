@@ -16,7 +16,7 @@ const Header = () => {
     };
 
     return (
-        <header className=" w-full z-50 bg-[#04477C] h-20">
+        <header className=" w-full z-50 bg-[#04477c] h-20">
             <div className="px-4 lg:px-6 h-14 flex items-center w-full pt-2 max-w-6xl mx-auto">
                 {/* Logo */}
                 <div className="mt-4 hidden md:block">
@@ -60,15 +60,15 @@ const Header = () => {
                         </SheetTrigger>
                         <div className="mt-4">
                             <a href='#' className="cursor-pointer">
-                                <img className="w-[5em] h-[4em] object-cover" src={logo} alt="Pharmedica Logo" />
+                                <img className="w-[5em] h-[4em] rounded-full object-cover" src={logo} alt="Pharmedica Logo" />
                             </a>
                         </div>
                         {/* Sheet Content */}
                         <SheetContent side="left" className="p-4 bg-white">
                             <nav className="flex flex-col gap-4">
-                                <button onClick={() => scrollToSection('about-us')} className="text-md font-medium hover:underline underline-offset-4">
+                                <link href='about-us' onClick={() => scrollToSection('about-us')} className="text-md font-medium hover:underline underline-offset-4">
                                     About Us
-                                </button>
+                                </link>
                                 <button onClick={() => scrollToSection('services')} className="text-md font-medium hover:underline underline-offset-4">
                                     Services
                                 </button>

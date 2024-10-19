@@ -3,20 +3,25 @@ import logo1 from "../assets/android-chrome-512x512.png"
 
 const clients = [
     {
-        name: 'Healthcare Provider Inc.',
+        name: 'pharmaceutical companies',
         logo: logo1,
-        testimonial: 'Pharmedica has been instrumental in improving our healthcare technology integration.',
+        // testimonial: 'Pharmedica has been instrumental in improving our healthcare technology integration.',
     },
     {
-        name: 'PharmaTech Solutions',
+        name: 'Health care Provider',
         logo: logo1,
-        testimonial: 'The team at Pharmedica provided valuable strategic advice that helped us expand our market reach.',
+        // testimonial: 'The team at Pharmedica provided valuable strategic advice that helped us expand our market reach.',
     },
     {
-        name: 'Nutritional Wellness Corp.',
+        name: 'Public and private  Health Organizations',
         logo: logo1,
-        testimonial: 'Their expertise in regulatory compliance ensured a smooth product launch.',
+        // testimonial: 'Their expertise in regulatory compliance ensured a smooth product launch.',
+    }, {
+        name: 'Academic and Research Institutions,',
+        logo: logo1,
+        // testimonial: 'Their expertise in regulatory compliance ensured a smooth product launch.',
     },
+   
     // Add more clients as needed
 ];
 
@@ -27,10 +32,10 @@ const ClientsSection = () => {
                 <div className="text-center mb-12">
                     {/* Heading */}
                     <h2 className="text-3xl font-bold mb-4 flex items-center justify-center">
-                        Our Clients
+                        Target Customers
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Collaborating with industry leaders to drive innovation and excellence in healthcare.
+                        Our strategic initiatives are designed to address the needs of various key players in the health industry.
                     </p>
                 </div>
 
@@ -50,7 +55,7 @@ const ClientsSection = () => {
                             </h3>
                             {/* Client Testimonial */}
                             <p className="text-gray-600 italic text-sm">
-                                "{client.testimonial}"
+                                {client.testimonial}
                             </p>
                         </div>
                     ))}

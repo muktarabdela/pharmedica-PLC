@@ -7,14 +7,14 @@ import logo2 from "../assets/Addis Ababa University Logo.png"
 const partners = [
     {
         name: 'Addis Ababa University',
-        logo: logo1,
-        description: 'Strategic partnership with Addis Ababa University aimed at advancing healthcare marketing integration.',
-    },
-    {
-        name: 'Pharmedica Healthcare Solutions',
         logo: logo2,
-        description: 'Pharmedica Consultancy and Technology PLC collaborates with various governmental and private health organizations.',
+        description: 'Pharmedica Consultancy and Technology PLC has partnered with Addis Ababa University (AAU) , Technology Business Incubation and Startup Center (TBISC). This collaboration aims to foster the incubation of innovative business technologies and support the commercialization of startups emerging from the TBISC.',
     },
+    // {
+    //     name: 'Pharmedica Healthcare Solutions',
+    //     logo: logo1,
+    //     description: 'Pharmedica Consultancy and Technology PLC collaborates with various governmental and private health organizations.',
+    // },
     // Add more partners as needed
 ]
 
@@ -47,9 +47,9 @@ export default function PartnersAffiliations() {
                                 <p className="text-muted-foreground text-center mb-6">
                                     {partner.description}
                                 </p>
-                                <div className="text-center">
+                                {/* <div className="text-center">
                                     <Button variant="outline">Learn More</Button>
-                                </div>
+                                </div> */}
                             </CardContent>
                         </Card>
                     ))}
