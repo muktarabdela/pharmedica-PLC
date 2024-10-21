@@ -11,6 +11,7 @@ import PartnersAffiliations from './component/PartnersAffiliations'
 import ClientsSection from './component/ClientsSection'
 import ContactSection from './component/ContactSection'
 import Footer from './component/Footer'
+import PartnersList from './component/PartnersList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       <Aboutus />
       <Services />
       <Strategy />
+      <PartnersList />
       <Team />
       <PartnersAffiliations />
       <ClientsSection />

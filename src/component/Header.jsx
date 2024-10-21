@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Sheet, SheetTrigger, SheetContent } from '../components/ui/sheet'; // Import Sheet from Shadcn
 import { Menu, X } from 'lucide-react'; // For the menu and close icons
-import logo from "../assets/android-chrome-512x512.png"; // Updated logo path
+import logo from "../assets/new logo.jpg"; // Updated logo path
+import logo1 from "../assets/android-chrome-512x512.png"; // Updated logo path
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,60 +25,93 @@ export default function Header() {
         }
     }, [targetSection, isOpen]);
 
-    const navItems = ['about-us', 'services', 'strategy', 'team', 'partners', 'contact'];
+    const navItems = ['about-us', 'services', 'strategy', 'team', 'partners'];
 
     return (
-        <header className="w-full z-50 bg-[#04477c] h-20">
-            <div className="px-4 lg:px-6 h-14 flex items-center w-full pt-2 max-w-6xl mx-auto">
+        <header className="w-full z-50 bg-[#04477c] h-20 lg:h-24">
+            <div className="px-4 lg:px-6 h-full flex items-center justify-between max-w-6xl mx-auto">
                 {/* Logo */}
-                <div className="mt-4 hidden md:block">
+                <div className="mt-2 lg:mt-0">
                     <a href='#' className="cursor-pointer">
-                        <img className="w-[5em] h-[4em] rounded-full object-cover" src={logo} alt="Pharmedica Logo" />
+                        <img className="h-[4.2em] lg:h-20 w-full rounded-lg object-cover" src={logo} alt="Pharmedica Logo" />
                     </a>
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex m-auto gap-4 sm:gap-6 text-white">
+                <nav className="hidden md:flex gap-6 lg:gap-10 text-white">
                     {navItems.map((item) => (
                         <button
                             key={item}
                             onClick={() => scrollToSection(item)}
-                            className="text-md font-medium hover:underline underline-offset-4 capitalize"
+                            className="text-md lg:text-lg font-medium hover:underline underline-offset-8 capitalize transition duration-200"
                         >
                             {item.replace('-', ' ')}
                         </button>
                     ))}
+
+                    {/* Contact Us Button */}
+                    <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ">
+                        <button
+                            className="bg-[#00796B] text-white py-3 px-8 rounded-full font-medium"
+                            onClick={() => scrollToSection('contact')}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </nav>
 
                 {/* Mobile Menu Button */}
-                <div className="md:hidden flex justify-between gap-20">
+                <div className="md:hidden">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <button
-                                className="p-2 text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#004D40]"
+                                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-[#04477c] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition duration-300 ease-in-out"
                                 aria-label="Open Menu"
                             >
-                                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                                {isOpen ? (
+                                    <X className="block h-6 w-6" aria-hidden="true" />
+                                ) : (
+                                    <Menu className="block h-6 w-6" aria-hidden="true" />
+                                )}
                             </button>
                         </SheetTrigger>
-                        <div className="mt-4">
-                            <a href='#' className="cursor-pointer">
-                                <img className="w-[5em] h-[4em] rounded-full object-cover" src={logo} alt="Pharmedica Logo" />
-                            </a>
-                        </div>
-                        {/* Sheet Content */}
-                        <SheetContent side="left" className="p-4 bg-white">
-                            <nav className="flex flex-col gap-4">
-                                {navItems.map((item) => (
-                                    <button
-                                        key={item}
-                                        onClick={() => scrollToSection(item)}
-                                        className="text-md font-medium hover:underline underline-offset-4 capitalize"
-                                    >
-                                        {item.replace('-', ' ')}
-                                    </button>
-                                ))}
-                            </nav>
+
+                        {/* Mobile Navigation */}
+                        <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-white">
+                            <div className="flex flex-col h-full">
+                                <div className="flex items-center justify-between px-4 pt-6 pb-6 border-b">
+                                    <div className="flex items-center">
+                                        <img
+                                            src={logo1}
+                                            alt="Pharmedica Logo"
+                                            width={48}
+                                            height={48}
+                                            className="w-12 h-12 rounded-full object-cover"
+                                        />
+                                        <span className="ml-3 text-xl font-bold text-gray-900">Pharmedica</span>
+                                    </div>
+                                </div>
+                                <nav className="flex-grow py-6">
+                                    <div className="px-4 space-y-1">
+                                        {navItems.map((item) => (
+                                            <button
+                                                key={item}
+                                                onClick={() => scrollToSection(item)}
+                                                className="block px-3 py-4 rounded-md text-base font-medium text-gray-900 hover:text-[#04477c] hover:bg-gray-50 transition duration-300 ease-in-out w-full text-left capitalize"
+                                            >
+                                                {item.replace('-', ' ')}
+                                            </button>
+                                        ))}
+                                        {/* Mobile Contact Us Button */}
+                                        <button
+                                            className="block px-3 py-4 rounded-md text-base font-medium text-white bg-[#00796B] hover:bg-[#00695C] transition duration-300 ease-in-out w-full text-left"
+                                            onClick={() => scrollToSection('contact')}
+                                        >
+                                            Contact Us
+                                        </button>
+                                    </div>
+                                </nav>
+                            </div>
                         </SheetContent>
                     </Sheet>
                 </div>

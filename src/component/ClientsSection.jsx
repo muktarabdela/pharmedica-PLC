@@ -1,68 +1,60 @@
 import React from 'react';
-import logo1 from "../assets/android-chrome-512x512.png"
+import { Building2, Hospital, GraduationCap, Users } from 'lucide-react';
 
 const clients = [
     {
-        name: 'pharmaceutical companies',
-        logo: logo1,
-        // testimonial: 'Pharmedica has been instrumental in improving our healthcare technology integration.',
+        name: 'Pharmaceutical Companies',
+        icon: Building2,
+        description: 'Leading drug manufacturers and research organizations',
     },
     {
-        name: 'Health care Provider',
-        logo: logo1,
-        // testimonial: 'The team at Pharmedica provided valuable strategic advice that helped us expand our market reach.',
+        name: 'Healthcare Providers',
+        icon: Hospital,
+        description: 'Hospitals, clinics, and medical practices',
     },
     {
-        name: 'Public and private  Health Organizations',
-        logo: logo1,
-        // testimonial: 'Their expertise in regulatory compliance ensured a smooth product launch.',
-    }, {
-        name: 'Academic and Research Institutions,',
-        logo: logo1,
-        // testimonial: 'Their expertise in regulatory compliance ensured a smooth product launch.',
+        name: 'Public and Private Health Organizations',
+        icon: Users,
+        description: 'Government health departments and private health institutions',
     },
-   
-    // Add more clients as needed
+    {
+        name: 'Academic and Research Institutions',
+        icon: GraduationCap,
+        description: 'Universities, medical schools, and research centers',
+    },
 ];
 
-const ClientsSection = () => {
+export default function ClientsSection() {
     return (
         <section className="py-16 bg-gradient-to-b from-background to-secondary/20">
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-12">
-                    {/* Heading */}
-                    <h2 className="text-3xl font-bold mb-4 flex items-center justify-center">
-                        Target Customers
-                    </h2>
+                    <h2 className="text-3xl font-bold mb-4">Target Customers</h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         Our strategic initiatives are designed to address the needs of various key players in the health industry.
                     </p>
                 </div>
 
-                {/* Client Logos and Testimonials */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
                     {clients.map((client, index) => (
-                        <div key={index} className="text-center p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white">
-                            {/* Client Logo */}
-                            <img
-                                src={client.logo}
-                                alt={`${client.name} logo`}
-                                className="h-20 mx-auto mb-4"
-                            />
-                            {/* Client Name */}
-                            <h3 className="text-xl font-semibold text-gray-700 mb-2">
-                                {client.name}
-                            </h3>
-                            {/* Client Testimonial */}
-                            <p className="text-gray-600 italic text-sm">
-                                {client.testimonial}
-                            </p>
+                        <div key={index} className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="flex-shrink-0 mr-4">
+                                <div className="p-3 bg-primary/10 rounded-full">
+                                    <client.icon className="w-8 h-8 text-primary" />
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                                    {client.name}
+                                </h3>
+                                <p className="text-gray-600">
+                                    {client.description}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
     );
-};
-
-export default ClientsSection;
+}

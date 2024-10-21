@@ -26,30 +26,40 @@ const Hero = () => {
 
     return (
         <div id="Pharmedica-hero" className="mt-24">
-            <div className="flex flex-col lg:flex-row bg-[#] p-6 lg:p-12 rounded-lg shadow-lg max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row bg-[#F9FAFB] p-6 lg:p-12 rounded-lg shadow-lg max-w-7xl mx-auto">
                 {/* Left Section */}
                 <div className="lg:w-[60%] w-full lg:pr-12 mb-8 lg:mb-0">
-                    <h1 className="text-3xl md:text-5xl font-medium leading-tight">
-                        Strategic Advisory <br />
-                        <span className="relative inline-block">
-                            for Healthcare Excellence
-                        </span>
+                    <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#004D40]">
+                        Your Growth
+                        <br />
+                        <span className="relative inline-block text-[#00796B]">
+                            Partner</span>
                     </h1>
-                    <p className="text-[#04D40] mt-4 md:mt-6 text-sm md:text-lg">
+
+                    {/* Slogans */}
+                    <div className="mt-4">
+                        <p className="text-md md:text-md text-[#004D40] font-light mt-1">
+                            Knowledge. Synergy. Impact.
+                        </p>
+                    </div>
+
+                    <p className="text-[#00796B] mt-6 text-sm md:text-lg">
                         Pharmedica Consultancy and Technology PLC provides tailored advisory services
                         and innovative technology solutions for healthcare organizations. Our mission is to
                         empower healthcare providers and companies to thrive in an evolving industry through
                         expert consultancy and cutting-edge technology integration.
                     </p>
+
                     {/* Buttons */}
-                    <div onClick={() => scrollToSection('contact')} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-                        <button  className="bg-[#00796B] text-white py-3 px-8 rounded-full font-medium">
+                    <div
+                        onClick={() => scrollToSection('contact')}
+                        className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8"
+                    >
+                        <button className="bg-[#00796B] text-white py-3 px-8 rounded-full font-medium">
                             Contact Us
                         </button>
-                        {/* <button className="border border-[#004D40] py-3 px-8 rounded-full text-[#004D40] font-medium">
-                            Learn More
-                        </button> */}
                     </div>
+
                     <div className="mt-4 text-[#004D40] text-sm">
                         <span>✓ Trusted Healthcare Advisory</span>
                     </div>
@@ -63,7 +73,7 @@ const Hero = () => {
                                 <CarouselItem key={index}>
                                     <img
                                         className="w-full h-[250px] sm:h-[350px] lg:h-[517px] object-cover rounded-lg"
-                                        src={image}  // Using the mapped image
+                                        src={image} // Using the mapped image
                                         alt="Healthcare consultancy"
                                     />
                                 </CarouselItem>
