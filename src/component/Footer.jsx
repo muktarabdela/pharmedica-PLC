@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-
+import { Phone, Mail, LocateIcon } from 'lucide-react'
 export default function Footer() {
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -113,23 +113,16 @@ const linkedinIcon = (
 );
 
 const emailIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2 3h20v18H2V3z" />
-    </svg>
+    <Mail className="w-5 h-5 text-primary-foreground" />
 );
 
 const locationIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2C8.13 2 5 5.13 5 9c0 4.88 7 11 7 11s7-6.12 7-11c0-3.87-3.13-7-7-7z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 12l.01-.011" />
-    </svg>
+    <LocateIcon className="w-5 h-5 text-primary-foreground" />
 );
 
 // Define the PhoneIcon SVG
 const phoneIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h18v18H3z" /> {/* Replace this path with the actual phone icon path */}
-    </svg>
+    <Phone className="w-5 h-5 text-primary-foreground" />
 );
 
 const youtubeIcon = (
