@@ -88,7 +88,8 @@ export default function Header() {
                                             height={48}
                                             className="w-12 h-12 rounded-full object-cover"
                                         />
-                                        <span className="ml-3 text-xl font-bold text-gray-900">Pharmedica</span>
+                                        <span className="ml-3 text-xl font-bold text-gray-900">Pharmedica
+                                            <span className='text-[#00796B] text-sm inline-flex'>consultancy PLC</span></span>
                                     </div>
                                 </div>
                                 <nav className="flex-grow py-6">
