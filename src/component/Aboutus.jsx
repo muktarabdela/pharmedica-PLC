@@ -42,7 +42,7 @@ export default function Aboutus() {
                                 <CardContent className="p-6 text-gray-50">
                                     <h3 className="text-2xl font-bold mb-4">Vision</h3>
                                     <p className="text-gray-50">
-                                        To revolutionize healthcare by integrating technology and personalized solutions that empower individuals to take charge of their health and well-being.
+                                        To revolutionize healthcare by seamlessly integrating cutting-edge research, innovative digital health solutions, and advanced technology, empowering individuals, organizations to achieve optimal health outcomes, and  ultimately fostering healthier communities and enhancing the quality of life for all.
                                     </p>
                                 </CardContent>
                             </Card>
