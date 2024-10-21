@@ -25,8 +25,8 @@ const Hero = () => {
     }, []);
 
     return (
-        <div id="Pharmedica-hero" className="mt-24">
-            <div className="flex flex-col lg:flex-row bg-[#F9FAFB] p-6 lg:p-12 rounded-lg shadow-lg max-w-7xl mx-auto">
+        <div id="Pharmedica-hero" className="mt-4">
+            <div className="flex flex-col lg:flex-row bg-[#] p-6 lg:p-12 rounded-lg shadow-lg max-w-7xl mx-auto">
                 {/* Left Section */}
                 <div className="lg:w-[60%] w-full lg:pr-12 mb-8 lg:mb-0">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#004D40]">
@@ -38,7 +38,7 @@ const Hero = () => {
 
                     {/* Slogans */}
                     <div className="mt-4">
-                        <p className="text-md md:text-md text-[#004D40] font-light mt-1">
+                        <p className="text-md md:text-md text-[#004D40] font-semibold mt-1">
                             Knowledge. Synergy. Impact.
                         </p>
                     </div>
