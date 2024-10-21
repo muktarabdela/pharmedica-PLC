@@ -1,22 +1,33 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Sheet, SheetTrigger, SheetContent } from '../components/ui/sheet'; // Import Sheet from Shadcn
 import { Menu, X } from 'lucide-react'; // For the menu and close icons
 import logo from "../assets/android-chrome-512x512.png"; // Updated logo path
 
-const Header = () => {
-    const [isOpen, setIsOpen] = useState(false); // State to control sheet visibility
+export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [targetSection, setTargetSection] = useState('');
 
-    // Function for smooth scroll
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-            setIsOpen(false); // Close mobile menu after navigating
+    const scrollToSection = useCallback((id) => {
+        setTargetSection(id);
+        setIsOpen(false);
+    }, []);
+
+    useEffect(() => {
+        if (targetSection && !isOpen) {
+            const section = document.getElementById(targetSection);
+            if (section) {
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    setTargetSection('');
+                }, 300); // Delay to ensure the menu is closed before scrolling
+            }
         }
-    };
+    }, [targetSection, isOpen]);
+
+    const navItems = ['about-us', 'services', 'strategy', 'team', 'partners', 'contact'];
 
     return (
-        <header className=" w-full z-50 bg-[#04477c] h-20">
+        <header className="w-full z-50 bg-[#04477c] h-20">
             <div className="px-4 lg:px-6 h-14 flex items-center w-full pt-2 max-w-6xl mx-auto">
                 {/* Logo */}
                 <div className="mt-4 hidden md:block">
@@ -27,24 +38,15 @@ const Header = () => {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex m-auto gap-4 sm:gap-6 text-white">
-                    <button onClick={() => scrollToSection('about-us')} className="text-md font-medium hover:underline underline-offset-4">
-                        About Us
-                    </button>
-                    <button onClick={() => scrollToSection('services')} className="text-md font-medium hover:underline underline-offset-4">
-                        Services
-                    </button>
-                    <button onClick={() => scrollToSection('strategy')} className="text-md font-medium hover:underline underline-offset-4">
-                        Strategy
-                    </button>
-                    <button onClick={() => scrollToSection('team')} className="text-md font-medium hover:underline underline-offset-4">
-                        Team
-                    </button>
-                    <button onClick={() => scrollToSection('partners')} className="text-md font-medium hover:underline underline-offset-4">
-                        Partners
-                    </button>
-                    <button onClick={() => scrollToSection('contact')} className="text-md font-medium hover:underline underline-offset-4">
-                        Contact
-                    </button>
+                    {navItems.map((item) => (
+                        <button
+                            key={item}
+                            onClick={() => scrollToSection(item)}
+                            className="text-md font-medium hover:underline underline-offset-4 capitalize"
+                        >
+                            {item.replace('-', ' ')}
+                        </button>
+                    ))}
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -66,24 +68,15 @@ const Header = () => {
                         {/* Sheet Content */}
                         <SheetContent side="left" className="p-4 bg-white">
                             <nav className="flex flex-col gap-4">
-                                <link href='about-us' onClick={() => scrollToSection('about-us')} className="text-md font-medium hover:underline underline-offset-4">
-                                    About Us
-                                </link>
-                                <button onClick={() => scrollToSection('services')} className="text-md font-medium hover:underline underline-offset-4">
-                                    Services
-                                </button>
-                                <button onClick={() => scrollToSection('strategy')} className="text-md font-medium hover:underline underline-offset-4">
-                                    Strategy
-                                </button>
-                                <button onClick={() => scrollToSection('team')} className="text-md font-medium hover:underline underline-offset-4">
-                                    Team
-                                </button>
-                                <button onClick={() => scrollToSection('partners')} className="text-md font-medium hover:underline underline-offset-4">
-                                    Partners
-                                </button>
-                                <button onClick={() => scrollToSection('contact')} className="text-md font-medium hover:underline underline-offset-4">
-                                    Contact
-                                </button>
+                                {navItems.map((item) => (
+                                    <button
+                                        key={item}
+                                        onClick={() => scrollToSection(item)}
+                                        className="text-md font-medium hover:underline underline-offset-4 capitalize"
+                                    >
+                                        {item.replace('-', ' ')}
+                                    </button>
+                                ))}
                             </nav>
                         </SheetContent>
                     </Sheet>
@@ -92,5 +85,3 @@ const Header = () => {
         </header>
     );
 }
-
-export default Header;

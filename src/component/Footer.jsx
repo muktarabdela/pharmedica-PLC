@@ -29,13 +29,16 @@ export default function Footer() {
                         </div>
                     </div>
 
+
                     {/* Quick Links */}
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
                             <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('about-us')}>About Us</div>
                             <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('services')}>Our Services</div>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('strategy')}>strategy</div>
                             <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('team')}>Our Team</div>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('partners')}>partners</div>
                             <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('contact')}>Contact Us</div>
                         </ul>
                     </div>
