@@ -13,7 +13,6 @@ export default function Footer() {
         // Check if the current page is home ("/")
         if (location.pathname === '/') {
             setTargetSection(id);
-            setIsOpen(false);
         } else {
             // If not on home, navigate to home and pass the section ID via state
             navigate('/', { state: { section: id } });
