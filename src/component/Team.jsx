@@ -48,7 +48,7 @@ export default function Team() {
             <div className="container px-4 max-w-7xl mx-auto" >
                 <h2 className="text-4xl font-bold text-center mb-12">Our Team</h2>
                 <p className="text-xl text-center text-muted-foreground mb-16 max-w-4xl mx-auto">
-                    Our team team at Pharmedica consultancy and technology company is composed of
+                    Our team at Pharmedica consultancy and technology company is composed of
                     experienced professionals with a deep understanding of the pharmaceutical, and the
                     health industry. The company’s executive board includes scientists, clinicians, and
                     industry veterans who drive its vision of creating a healthier world through innovation

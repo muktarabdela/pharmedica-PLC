@@ -12,6 +12,7 @@ import mpa from "../assets/MPA.png"
 import ethiotel from "../assets/ethiotel.png"
 import moe from "../assets/moe.jpeg"
 import mls from "../assets/mls.jpeg"
+import eyea from "../assets/eysa.svg"
 
 const partners = [
     { name: "Ministry of Health (MOH)", logo: moh },
@@ -22,6 +23,7 @@ const partners = [
     { name: "Ethio Telecom", logo: ethiotel },
     { name: "Ministry of Education (MOE)", logo: moe },
     { name: "Ministry of Labour and Skills (MOLS)", logo: mls },
+    { name: "Ethiopian Youth Entrepreneurs Association (EYEA)", logo: eyea },
 ];
 
 export default function PartnersAffiliations() {
