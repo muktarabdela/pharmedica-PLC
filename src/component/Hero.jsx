@@ -12,7 +12,6 @@ const Hero = () => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
-            setIsOpen(false); // Close mobile menu after navigating
         }
     };
 
