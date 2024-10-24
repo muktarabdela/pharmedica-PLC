@@ -60,14 +60,15 @@ export default function Footer() {
                             <div className='hover:underline cursor-pointer'
                             >
                                 <Link to="/services">Services</Link>
-
                             </div>
-                            <div className='hover:underline cursor-pointer' >                        <Link to="/strategy">Strategy</Link>
+                            <div className='hover:underline cursor-pointer' >
+                                <Link to="/strategy">Strategy</Link>
                             </div>
                             <div className='hover:underline cursor-pointer' >
                                 <Link to="/team">Team</Link>
                             </div>
                             <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('partners')}>Partners</div>
+                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('contact')}>contact us</div>
                         </ul>
                     </div>
 
