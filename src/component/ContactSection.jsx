@@ -51,7 +51,7 @@ export default function ContactSection() {
         }
     }, [successMessage]);
     return (
-        <section id='contact' className="py-16 bg-gradient-to-b from-background to-secondary/20">
+        <section className="py-16 bg-gradient-to-b from-background to-secondary/20">
             <div className="container px-4 max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-12">Get in Touch</h2>
 
@@ -74,7 +74,7 @@ export default function ContactSection() {
                         </CardHeader>
                         <CardContent>
                             <form onSubmit={sendEmail} className="space-y-4">
-                                <Input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required/>
+                                <Input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required />
                                 <Input
                                     name="email"
                                     value={formData.email}

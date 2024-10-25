@@ -77,7 +77,7 @@ export default function PartnersAffiliations() {
     }
 
     return (
-        <section id='partners' className="py-16 bg-gradient-to-b from-background to-secondary/20 overflow-hidden">
+        <section className="py-16 bg-gradient-to-b from-background to-secondary/20 overflow-hidden">
             <div className="container px-4 max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold mb-4 flex items-center justify-center">
