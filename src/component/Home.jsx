@@ -9,7 +9,10 @@ import { useLocation } from 'react-router-dom';
 
 const Home = () => {
     const location = useLocation();
-
+    // Scroll to the top when the component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     useEffect(() => {
         // Check if the location state contains a section to scroll to
         if (location.state?.section) {
