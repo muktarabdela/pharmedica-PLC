@@ -4,23 +4,25 @@ import { Menu, X } from 'lucide-react'; // For the menu and close icons
 import logo from "../assets/new logo.jpg"; // Updated logo path
 import logo1 from "../assets/android-chrome-512x512.png"; // Updated logo path
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useScrollToSection } from './useScrollToSection';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [targetSection, setTargetSection] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    const scrollToSection = useScrollToSection();
 
-    const scrollToSection = useCallback((id) => {
-        // Check if the current page is home ("/")
-        if (location.pathname === '/') {
-            setTargetSection(id);
-            setIsOpen(false);
-        } else {
-            // If not on home, navigate to home and pass the section ID via state
-            navigate('/', { state: { section: id } });
-        }
-    }, [location, navigate]);
+    // const scrollToSection = useCallback((id) => {
+    //     // Check if the current page is home ("/")
+    //     if (location.pathname === '/') {
+    //         setTargetSection(id);
+    //         setIsOpen(false);
+    //     } else {
+    //         // If not on home, navigate to home and pass the section ID via state
+    //         navigate('/', { state: { section: id } });
+    //     }
+    // }, [location, navigate]);
 
     useEffect(() => {
         if (targetSection && !isOpen) {

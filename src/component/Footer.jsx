@@ -1,23 +1,21 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Phone, Mail, LocateIcon } from 'lucide-react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useScrollToSection } from './useScrollToSection';
 export default function Footer() {
-    const navigate = useNavigate();
-    const location = useLocation();
     const [targetSection, setTargetSection] = useState('');
+    const scrollToSection = useScrollToSection();
 
-    const scrollToSection = useCallback((id) => {
-        // Check if the current page is home ("/")
-        if (location.pathname === '/') {
-            setTargetSection(id);
-        } else {
-            // If not on home, navigate to home and pass the section ID via state
-            navigate('/', { state: { section: id } });
-        }
-    }, [location, navigate]);
+    // const scrollToSection = useCallback((id) => {
+    //     // Check if the current page is home ("/")
+    //     if (location.pathname === '/') {
+    //         setTargetSection(id);
+    //     } else {
+    //         // If not on home, navigate to home and pass the section ID via state
+    //         navigate('/', { state: { section: id } });
+    //     }
+    // }, [location, navigate]);
 
     useEffect(() => {
         if (targetSection) {

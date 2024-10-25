@@ -2,18 +2,20 @@ import React, { useEffect, useState } from 'react';
 import image1 from '../assets/hero 2.jpg';
 import image2 from '../assets/about us.jpg';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { useScrollToSection } from './useScrollToSection';
 
 const images = [image2, image2];
 
 const Hero = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const scrollToSection = useScrollToSection();
 
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+    // const scrollToSection = (id) => {
+    //     const section = document.getElementById(id);
+    //     if (section) {
+    //         section.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // };
 
     // Auto-slide effect
     useEffect(() => {
