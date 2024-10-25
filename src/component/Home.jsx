@@ -1,35 +1,40 @@
+
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Hero from './Hero'
 import Aboutus from './Aboutus'
-import PartnersList from './PartnersList'
 import PartnersAffiliations from './PartnersAffiliations'
 import ClientsSection from './ClientsSection'
 import ContactSection from './ContactSection'
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
-const Home = () => {
-    const location = useLocation();
-    // Scroll to the top when the component mounts
+export default function Home() {
+    const location = useLocation()
 
     useEffect(() => {
-        // Check if the location state contains a section to scroll to
         if (location.state?.section) {
-            const section = document.getElementById(location.state.section);
+            const section = document.getElementById(location.state.section)
             if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
+                // Use a small delay to ensure the component has fully rendered
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }, 100)
             }
         }
-    }, [location]);
-    return (
-        <div>
-            <Hero />
-            <section id="about-us"><Aboutus /> </section>
-            <section id="partners"><PartnersAffiliations /> </section>
+    }, [location])
 
+    return (
+        <div className="overflow-x-hidden">
+            <Hero />
+            <section id="about-us">
+                <Aboutus />
+            </section>
+            <section id="partners">
+                <PartnersAffiliations />
+            </section>
             <ClientsSection />
-            <section id="contact"><ContactSection /> </section>
+            <section id="contact">
+                <ContactSection />
+            </section>
         </div>
     )
 }
-
-export default Home
