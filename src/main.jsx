@@ -1,3 +1,5 @@
+import smoothscroll from 'smoothscroll-polyfill';
+smoothscroll.polyfill();
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'

@@ -9,17 +9,23 @@ export function useScrollToSection() {
     const [targetSection, setTargetSection] = useState('');
 
     const scrollToSection = useCallback((id) => {
+        const section = document.getElementById(id);
         if (location.pathname === '/') {
-            setTargetSection(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         } else {
             navigate('/', { state: { section: id } });
         }
     }, [location, navigate]);
 
+
     useEffect(() => {
         if (targetSection) {
             const section = document.getElementById(targetSection);
             if (section) {
+                console.log(`Scrolling to section: ${targetSection}`); // Debugging line
+
                 setTimeout(() => {
                     section.scrollIntoView({ behavior: 'smooth' });
                     setTargetSection('');
