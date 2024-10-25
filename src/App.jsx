@@ -10,10 +10,9 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './component/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className=''>
+    <div>
 
       <Header />
       <Routes>
