@@ -51,7 +51,7 @@ export default function ContactSection() {
         }
     }, [successMessage]);
     return (
-        <section className="py-16 bg-gradient-to-b from-background to-secondary/20">
+        <section id="contact" className="py-16 bg-gradient-to-b from-background to-secondary/20">
             <div className="container px-4 max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-12">Get in Touch</h2>
 
