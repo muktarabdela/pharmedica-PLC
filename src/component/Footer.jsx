@@ -56,7 +56,10 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
-                            <div className='hover:underline cursor-pointer' onClick={() => scrollToSection('about-us')}>About Us</div>
+                            <div className='hover:underline cursor-pointer' onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection('about-us');
+                            }}>About Us</div>
                             <div className='hover:underline cursor-pointer'
                             >
                                 <Link to="/services">Services</Link>
