@@ -13,16 +13,16 @@ export default function Header() {
     const location = useLocation();
     const scrollToSection = useScrollToSection();
 
-    // const scrollToSection = useCallback((id) => {
-    //     // Check if the current page is home ("/")
-    //     if (location.pathname === '/') {
-    //         setTargetSection(id);
-    //         setIsOpen(false);
-    //     } else {
-    //         // If not on home, navigate to home and pass the section ID via state
-    //         navigate('/', { state: { section: id } });
-    //     }
-    // }, [location, navigate]);
+    const scrollToSectionFromMenu = useCallback((id) => {
+        // Check if the current page is home ("/")
+        if (location.pathname === '/') {
+            setTargetSection(id);
+            setIsOpen(false);
+        } else {
+            // If not on home, navigate to home and pass the section ID via state
+            navigate('/', { state: { section: id } });
+        }
+    }, [location, navigate]);
 
     useEffect(() => {
         if (targetSection && !isOpen) {
@@ -126,7 +126,7 @@ export default function Header() {
                                             </button>
                                         ))} */}
                                         <button
-                                            onClick={() => scrollToSection('about-us')}
+                                            onClick={() => scrollToSectionFromMenu('about-us')}
                                             className="block px-3 py-4 rounded-md text-base font-medium text-gray-900 hover:text-[#04477c] hover:bg-gray-50 transition duration-300 ease-in-out w-full text-left capitalize"
                                         >
                                             About us
@@ -145,7 +145,7 @@ export default function Header() {
                                             <Link onClick={() => setIsOpen(false)} to="/team">Team</Link>
                                         </button>
                                         <button
-                                            onClick={() => scrollToSection('partners')}
+                                            onClick={() => scrollToSectionFromMenu('partners')}
                                             className="block px-3 py-4 rounded-md text-base font-medium text-gray-900 hover:text-[#04477c] hover:bg-gray-50 transition duration-300 ease-in-out w-full text-left capitalize"
                                         >
                                             Partner
@@ -153,7 +153,7 @@ export default function Header() {
                                         {/* Mobile Contact Us Button */}
                                         <button
                                             className="block px-3 py-4 rounded-md text-base font-medium text-white bg-[#00796B] hover:bg-[#00695C] transition duration-300 ease-in-out w-full text-left"
-                                            onClick={() => scrollToSection('contact')}
+                                            onClick={() => scrollToSectionFromMenu('contact')}
                                         >
                                             Contact Us
                                         </button>
