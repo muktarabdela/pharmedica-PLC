@@ -38,7 +38,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Pharmedica</h3>
                         <p className="text-sm mb-4">
-                            Transforming healthcare through innovative consultancy and technology solutions.
+                            transferring health care through strategic advisory and innovative technology
                         </p>
                         <div className="flex space-x-4">
                             <SocialIcon icon={facebookIcon} href="https://www.facebook.com/yourprofile" />

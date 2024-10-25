@@ -24,15 +24,15 @@ const partners = [
     { name: "Ministry of Education (MOE)", logo: moe },
     { name: "Ministry of Labour and Skills (MOLS)", logo: mls },
     { name: "Ethiopian Youth Entrepreneurs Association (EYEA)", logo: eyea },
-];
+]
 
 export default function PartnersAffiliations() {
     const scrollRef = useRef(null)
-    const [isHovered, setIsHovered] = useState(false)
+    const [isAnimationStopped, setIsAnimationStopped] = useState(false)
     const [animationId, setAnimationId] = useState(null)
 
     const startAnimation = () => {
-        if (animationId) return;
+        if (animationId) return
 
         const scrollContainer = scrollRef.current
         if (!scrollContainer) return
@@ -48,7 +48,7 @@ export default function PartnersAffiliations() {
             }
         }
 
-        const id = setInterval(animateScroll, 20)
+        const id = setInterval(animateScroll, 10)
         setAnimationId(id)
     }
 
@@ -60,22 +60,21 @@ export default function PartnersAffiliations() {
     }
 
     useEffect(() => {
-        startAnimation()
-        return () => stopAnimation()
-    }, [])
-
-    useEffect(() => {
-        if (isHovered) {
-            stopAnimation()
-        } else {
+        if (!isAnimationStopped) {
             startAnimation()
+        } else {
+            stopAnimation()
         }
-    }, [isHovered])
+        return () => stopAnimation()
+    }, [isAnimationStopped])
 
-    const handleMouseEnter = () => setIsHovered(true)
-    const handleMouseLeave = () => setIsHovered(false)
-    const handleTouchStart = () => setIsHovered(true)
-    const handleTouchEnd = () => setIsHovered(false)
+    const handleCardInteraction = () => {
+        setIsAnimationStopped(true)
+    }
+
+    const handleContainerMouseLeave = () => {
+        setIsAnimationStopped(false)
+    }
 
     return (
         <section id='partners' className="py-16 bg-gradient-to-b from-background to-secondary/20 overflow-hidden">
@@ -95,15 +94,14 @@ export default function PartnersAffiliations() {
                         ref={scrollRef}
                         className="flex overflow-x-hidden"
                         style={{ width: '200%' }}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        onTouchStart={handleTouchStart}
-                        onTouchEnd={handleTouchEnd}
+                        onMouseLeave={handleContainerMouseLeave}
                     >
                         {[...partners, ...partners].map((partner, index) => (
                             <Card
                                 key={index}
                                 className="flex-none w-[250px] mx-4 overflow-hidden transition-all hover:shadow-lg"
+                                onMouseEnter={handleCardInteraction}
+                                onClick={handleCardInteraction}
                             >
                                 <CardHeader className="p-6 bg-primary/5">
                                     <img

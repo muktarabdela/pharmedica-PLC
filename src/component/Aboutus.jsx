@@ -29,7 +29,7 @@ export default function Aboutus() {
                                     Our team of experienced professionals brings together deep industry knowledge and technical expertise to provide solutions that meet the unique challenges faced by healthcare organizations. We focus on helping our clients improve patient outcomes and enhance operational efficiency through our tailored services.
                                 </p>
                                 <p className="text-muted-foreground text-gray-900 font-medium text-lg">
-                                    Our mission is to empower healthcare providers with innovative strategies and technologies that enhance their service delivery. We are dedicated to fostering a healthier community by aligning our efforts with the goals of our clients and the needs of the people they serve.
+                                    Our mission is to empower healthcare providers with strategic advisory and innovative technologies that enhance their service delivery. We are dedicated to fostering a healthier community by aligning our efforts with the goals of our clients and the needs of the people they serve.
                                 </p>
                             </div>
                         </div>
@@ -50,7 +50,7 @@ export default function Aboutus() {
                                 <CardContent className="p-6">
                                     <h3 className="text-2xl font-bold mb-4 text-gray-50">Mission</h3>
                                     <p className="text-gray-50">
-                                        To provide innovative health consultancy and digital solutions that enhance the accessibility, efficiency, and effectiveness of healthcare services, fostering a healthier society through education, technology, and support.
+                                        To provide the leading health consultancy and digital health solution in Africa, that enhance the accessibility, efficiency, and effectiveness of healthcare services, fostering a healthier society through education, technology, and support.
                                     </p>
                                 </CardContent>
                             </Card>

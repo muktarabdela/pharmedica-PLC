@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import image1 from '../assets/hero 2.jpg';
-import image2 from '../assets/hero 1.jpg';
+import image2 from '../assets/about us.jpg';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
-const images = [image2, image1];
+const images = [image2, image2];
 
 const Hero = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -67,7 +67,7 @@ const Hero = () => {
                 </div>
 
                 {/* Right Section */}
-                <div className="lg:w-[50%] w-full relative">
+                <div className="lg:w-[60%] w-full relative">
                     <Carousel>
                         <CarouselContent>
                             {images.map((image, index) => (
