@@ -16,7 +16,7 @@ import eyea from "../assets/eysa.svg"
 
 const partners = [
     { name: "Ministry of Health (MOH)", logo: moh },
-    { name: "Ministry of Innovation and Technology (MInT)", logo: mint },
+    { name: "Ministry of Innovation and Technology (MinT)", logo: mint },
     { name: "Addis Ababa University (AAU)", logo: AAU },
     { name: "Wollo University (WU)", logo: wu },
     { name: "Ethiopian Pharmacists Association (EPA)", logo: mpa },
