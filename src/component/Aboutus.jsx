@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "../assets/about us.jpg";
+import image from "../assets/hero.jpg";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Lightbulb, Eye, MessageCircle, HeadphonesIcon, Heart, Recycle } from 'lucide-react'
@@ -50,7 +50,7 @@ export default function Aboutus() {
                                 <CardContent className="p-6">
                                     <h3 className="text-2xl font-bold mb-4 text-gray-50">Mission</h3>
                                     <p className="text-gray-50">
-                                        To provide the leading health consultancy and digital health solution in Africa, that enhance the accessibility, efficiency, and effectiveness of healthcare services, fostering a healthier society through education, technology, and support.
+                                        To provide the leading health consultancy and digital health solution in Africa, that enhance the accessibility, efficiency, and effectiveness of health care services, fostering a healthier society through  research, education, technology, and support.
                                     </p>
                                 </CardContent>
                             </Card>
