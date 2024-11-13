@@ -6,8 +6,7 @@ import { Lightbulb, Eye, MessageCircle, HeadphonesIcon, Heart, Recycle } from 'l
 
 export default function Aboutus() {
     return (
-        <div id='about-us'>
-
+        <div>
             <div className="max-w-7xl mx-auto my-6 py-12">
                 <div className="container mx-auto px-4">
                     {/* About Us Section */}
