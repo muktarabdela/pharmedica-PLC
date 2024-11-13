@@ -16,8 +16,9 @@ export default function Home() {
             if (section) {
                 // Use a small delay to ensure the component has fully rendered
                 setTimeout(() => {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                }, 100)
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+
             }
         }
     }, [location])
