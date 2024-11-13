@@ -8,14 +8,14 @@ const images = [image2, image2];
 
 const Hero = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const scrollToSection = useScrollToSection();
+    // const scrollToSection = useScrollToSection();
 
-    // const scrollToSection = (id) => {
-    //     const section = document.getElementById(id);
-    //     if (section) {
-    //         section.scrollIntoView({ behavior: 'smooth' });
-    //     }
-    // };
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     // Auto-slide effect
     useEffect(() => {
