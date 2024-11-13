@@ -12,16 +12,17 @@ export default function Home() {
 
     useEffect(() => {
         if (location.state?.section) {
-            const section = document.getElementById(location.state.section)
+            const section = document.getElementById(location.state.section);
             if (section) {
-                // Use a small delay to ensure the component has fully rendered
+                console.log(`Scrolling to section: ${location.state.section}`);
                 setTimeout(() => {
                     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 300);
-
+            } else {
+                console.warn(`Section with ID "${location.state.section}" not found.`);
             }
         }
-    }, [location])
+    }, [location]);
 
     return (
         <div className="overflow-x-hidden">
