@@ -78,7 +78,7 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-2">
                             <ContactItem icon={phoneIcon} text="0978780288" />
-                            <ContactItem icon={emailIcon} text="Pharmedica.et@gmail.com" />
+                            <ContactItem icon={emailIcon} text="support@pharmedica.et" />
                             <ContactItem icon={locationIcon} text="Arada Subcity, Woreda 06, Addis Ababa, Ethiopia" />
                         </ul>
                     </div>

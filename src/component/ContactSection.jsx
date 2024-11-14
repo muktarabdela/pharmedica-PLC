@@ -63,7 +63,7 @@ export default function ContactSection() {
                         <CardContent className="space-y-4">
                             <ContactItem icon={<Building />} label="Business Name" value="Pharmedica Consultancy and Technology PLC" />
                             <ContactItem icon={<Phone />} label="Phone" value="0978780288" />
-                            <ContactItem icon={<Mail />} label="Email" value="Pharmedica.et@gmail.com" isLink />
+                            <ContactItem icon={<Mail />} label="Email" value="support@pharmedica.et" isLink />
                             <ContactItem icon={<MapPin />} label="Address" value="Arada Subcity, Woreda 06, AAU TBIC, 5 Kilo, Postal ZIP Code 1000, Addis Ababa, Ethiopia" />
                         </CardContent>
                     </Card>
