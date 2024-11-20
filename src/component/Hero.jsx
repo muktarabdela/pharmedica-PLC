@@ -32,7 +32,7 @@ const Hero = () => {
                 <div className="lg:w-[60%] w-full lg:pr-12 mb-8 lg:mb-0">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-950">
                         Your                            {' '}
-                        <span className="relative inline-block text-[#04477C]">
+                        <span className="relative inline-block">
                             Growth
                         </span>
                         <br />
@@ -41,12 +41,12 @@ const Hero = () => {
 
                     {/* Slogans */}
                     <div className="mt-4">
-                        <p className="text-md md:text-md text-[#004D40] font-semibold mt-1">
+                        <p className="text-md md:text-md text-[#04477c] font-semibold mt-1">
                             Knowledge. Synergy. Impact.
                         </p>
                     </div>
 
-                    <p className="text-[#00796B] mt-6 text-sm md:text-lg">
+                    <p className="font-normal mt-6 text-sm md:text-lg">
                         Pharmedica Consultancy and Technology PLC provides tailored advisory services
                         and innovative technology solutions for healthcare organizations. Our mission is to
                         empower healthcare providers and companies to thrive in an evolving industry through
@@ -58,12 +58,12 @@ const Hero = () => {
                         onClick={() => scrollToSection('contact')}
                         className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8"
                     >
-                        <button className="bg-[#00796B] text-white py-3 px-8 rounded-full font-medium">
+                        <button className="bg-[#04477c] text-white py-3 px-8 rounded-full font-medium">
                             Contact Us
                         </button>
                     </div>
 
-                    <div className="mt-4 text-[#004D40] text-sm">
+                    <div className="mt-4 text-[#04477c] text-sm">
                         <span>✓ Trusted Healthcare Advisory</span>
                     </div>
                 </div>
